@@ -24,8 +24,8 @@ app.use(cors({
     origin: process.env.CLIENT_URL 
 }))
 //HTTP request logger
-app.use(morgan('Dev'));
-app.use('/',routes);
+app.use(morgan('dev'));
+app.use('/api',routes);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
@@ -35,4 +35,4 @@ if (process.env.NODE_ENV === 'production') {
     });
 }
 
-app.listen(PORT, console.log('Server is starting at ',  PORT));
+app.listen(5000, console.log('Server is starting at ',  5000));
